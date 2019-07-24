@@ -15,6 +15,12 @@
 		3968DE8422E7FC7200087C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3968DE8222E7FC7200087C1B /* LaunchScreen.storyboard */; };
 		3968DE8F22E7FC7200087C1B /* Hubbles_Messier_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DE8E22E7FC7200087C1B /* Hubbles_Messier_MVVMTests.swift */; };
 		3968DE9A22E7FC7200087C1B /* Hubbles_Messier_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DE9922E7FC7200087C1B /* Hubbles_Messier_MVVMUITests.swift */; };
+		3968DEAD22E7FEBA00087C1B /* ViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEAC22E7FEBA00087C1B /* ViewController+TableViewDataSource.swift */; };
+		3968DEAF22E7FECE00087C1B /* ViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEAE22E7FECE00087C1B /* ViewController+TableViewDelegate.swift */; };
+		3968DEB122E7FEDE00087C1B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEB022E7FEDE00087C1B /* DetailViewController.swift */; };
+		3968DEB322E7FF1C00087C1B /* updatedDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEB222E7FF1C00087C1B /* updatedDateModel.swift */; };
+		3968DEB522E7FF4900087C1B /* messierDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEB422E7FF4900087C1B /* messierDataModel.swift */; };
+		3968DEB722E8006200087C1B /* MessierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3968DEB622E8006200087C1B /* MessierViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		3968DE9522E7FC7200087C1B /* Hubbles Messier MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hubbles Messier MVVMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3968DE9922E7FC7200087C1B /* Hubbles_Messier_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hubbles_Messier_MVVMUITests.swift; sourceTree = "<group>"; };
 		3968DE9B22E7FC7200087C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3968DEAC22E7FEBA00087C1B /* ViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		3968DEAE22E7FECE00087C1B /* ViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		3968DEB022E7FEDE00087C1B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3968DEB222E7FF1C00087C1B /* updatedDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatedDateModel.swift; sourceTree = "<group>"; };
+		3968DEB422E7FF4900087C1B /* messierDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messierDataModel.swift; sourceTree = "<group>"; };
+		3968DEB622E8006200087C1B /* MessierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessierViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +111,13 @@
 		3968DE7522E7FC7000087C1B /* Hubbles Messier MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				3968DE7622E7FC7000087C1B /* AppDelegate.swift */,
-				3968DE7822E7FC7000087C1B /* ViewController.swift */,
-				3968DE7A22E7FC7000087C1B /* Main.storyboard */,
-				3968DE8022E7FC7200087C1B /* Assets.xcassets */,
-				3968DE8222E7FC7200087C1B /* LaunchScreen.storyboard */,
+				3968DEA922E7FDF800087C1B /* Controller */,
+				3968DEA722E7FDE000087C1B /* Model */,
+				3968DEAA22E7FE0100087C1B /* View */,
+				3968DEA822E7FDEF00087C1B /* ViewModel */,
 				3968DE8522E7FC7200087C1B /* Info.plist */,
+				3968DE7622E7FC7000087C1B /* AppDelegate.swift */,
+				3968DE8022E7FC7200087C1B /* Assets.xcassets */,
 				3968DE7D22E7FC7000087C1B /* Hubbles_Messier_MVVM.xcdatamodeld */,
 			);
 			path = "Hubbles Messier MVVM";
@@ -126,6 +139,43 @@
 				3968DE9B22E7FC7200087C1B /* Info.plist */,
 			);
 			path = "Hubbles Messier MVVMUITests";
+			sourceTree = "<group>";
+		};
+		3968DEA722E7FDE000087C1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3968DEB222E7FF1C00087C1B /* updatedDateModel.swift */,
+				3968DEB422E7FF4900087C1B /* messierDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3968DEA822E7FDEF00087C1B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3968DEB622E8006200087C1B /* MessierViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3968DEA922E7FDF800087C1B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3968DE7822E7FC7000087C1B /* ViewController.swift */,
+				3968DEAC22E7FEBA00087C1B /* ViewController+TableViewDataSource.swift */,
+				3968DEAE22E7FECE00087C1B /* ViewController+TableViewDelegate.swift */,
+				3968DEB022E7FEDE00087C1B /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3968DEAA22E7FE0100087C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3968DE7A22E7FC7000087C1B /* Main.storyboard */,
+				3968DE8222E7FC7200087C1B /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3968DE7922E7FC7000087C1B /* ViewController.swift in Sources */,
+				3968DEAF22E7FECE00087C1B /* ViewController+TableViewDelegate.swift in Sources */,
 				3968DE7F22E7FC7000087C1B /* Hubbles_Messier_MVVM.xcdatamodeld in Sources */,
+				3968DEB322E7FF1C00087C1B /* updatedDateModel.swift in Sources */,
+				3968DEB522E7FF4900087C1B /* messierDataModel.swift in Sources */,
+				3968DEB122E7FEDE00087C1B /* DetailViewController.swift in Sources */,
 				3968DE7722E7FC7000087C1B /* AppDelegate.swift in Sources */,
+				3968DEAD22E7FEBA00087C1B /* ViewController+TableViewDataSource.swift in Sources */,
+				3968DEB722E8006200087C1B /* MessierViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
